@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55D0F102F71EE4909BF96F81 /* Pods_the_avalanche.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45E6D3D731BD2A0E9DFE0527 /* Pods_the_avalanche.framework */; };
+		D0FB12F711885823B257A03A /* Pods_the_avalancheTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF5B739CB7606E9B2895D864 /* Pods_the_avalancheTests.framework */; };
 		D9C2948A24F718D50086884D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C2948924F718D50086884D /* AppDelegate.swift */; };
 		D9C2948C24F718D50086884D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C2948B24F718D50086884D /* SceneDelegate.swift */; };
 		D9C2948E24F718D50086884D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C2948D24F718D50086884D /* ViewController.swift */; };
@@ -15,6 +17,12 @@
 		D9C2949624F718DC0086884D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9C2949524F718DC0086884D /* Assets.xcassets */; };
 		D9C2949924F718DC0086884D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9C2949724F718DC0086884D /* LaunchScreen.storyboard */; };
 		D9C294A424F718DD0086884D /* the_avalancheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C294A324F718DD0086884D /* the_avalancheTests.swift */; };
+		D9C294B124F8814B0086884D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D9C294B024F8814B0086884D /* GoogleService-Info.plist */; };
+		D9CE106324F9E3F500224706 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CE106224F9E3F500224706 /* SettingsViewController.swift */; };
+		D9CE106524F9F1AF00224706 /* ActionItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CE106424F9F1AF00224706 /* ActionItemTableViewCell.swift */; };
+		D9E0795924F984D6001C27CB /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E0795824F984D6001C27CB /* SignUpViewController.swift */; };
+		D9E0795B24F9DF61001C27CB /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E0795A24F9DF61001C27CB /* LogInViewController.swift */; };
+		D9E0795D24F9E023001C27CB /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E0795C24F9E023001C27CB /* HomeTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +36,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		45E6D3D731BD2A0E9DFE0527 /* Pods_the_avalanche.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_the_avalanche.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		725AD1941A6C4959ABA9686F /* Pods-the avalancheTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-the avalancheTests.debug.xcconfig"; path = "Target Support Files/Pods-the avalancheTests/Pods-the avalancheTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7F5365FE7C237A4E7A5411AB /* Pods-the avalanche.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-the avalanche.release.xcconfig"; path = "Target Support Files/Pods-the avalanche/Pods-the avalanche.release.xcconfig"; sourceTree = "<group>"; };
+		AF5B739CB7606E9B2895D864 /* Pods_the_avalancheTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_the_avalancheTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC610283330916190B63E76D /* Pods-the avalanche.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-the avalanche.debug.xcconfig"; path = "Target Support Files/Pods-the avalanche/Pods-the avalanche.debug.xcconfig"; sourceTree = "<group>"; };
+		CFFA1F343BFA04F28FCDEA8E /* Pods-the avalancheTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-the avalancheTests.release.xcconfig"; path = "Target Support Files/Pods-the avalancheTests/Pods-the avalancheTests.release.xcconfig"; sourceTree = "<group>"; };
 		D9C2948624F718D50086884D /* the avalanche.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "the avalanche.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9C2948924F718D50086884D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9C2948B24F718D50086884D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +54,12 @@
 		D9C2949F24F718DD0086884D /* the avalancheTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "the avalancheTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9C294A324F718DD0086884D /* the_avalancheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = the_avalancheTests.swift; sourceTree = "<group>"; };
 		D9C294A524F718DD0086884D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9C294B024F8814B0086884D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D9CE106224F9E3F500224706 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		D9CE106424F9F1AF00224706 /* ActionItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionItemTableViewCell.swift; sourceTree = "<group>"; };
+		D9E0795824F984D6001C27CB /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		D9E0795A24F9DF61001C27CB /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		D9E0795C24F9E023001C27CB /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55D0F102F71EE4909BF96F81 /* Pods_the_avalanche.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,18 +75,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0FB12F711885823B257A03A /* Pods_the_avalancheTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B94DAC3E9A2E2E98FAD56E4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				45E6D3D731BD2A0E9DFE0527 /* Pods_the_avalanche.framework */,
+				AF5B739CB7606E9B2895D864 /* Pods_the_avalancheTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D9C2947D24F718D50086884D = {
 			isa = PBXGroup;
 			children = (
 				D9C2948824F718D50086884D /* the avalanche */,
 				D9C294A224F718DD0086884D /* the avalancheTests */,
 				D9C2948724F718D50086884D /* Products */,
+				E1D51ED750A4947A815CCF2D /* Pods */,
+				2B94DAC3E9A2E2E98FAD56E4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,11 +117,17 @@
 				D9C2948924F718D50086884D /* AppDelegate.swift */,
 				D9C2948B24F718D50086884D /* SceneDelegate.swift */,
 				D9C2948D24F718D50086884D /* ViewController.swift */,
+				D9E0795C24F9E023001C27CB /* HomeTableViewController.swift */,
+				D9E0795824F984D6001C27CB /* SignUpViewController.swift */,
+				D9E0795A24F9DF61001C27CB /* LogInViewController.swift */,
 				D9C2948F24F718D50086884D /* Main.storyboard */,
+				D9CE106424F9F1AF00224706 /* ActionItemTableViewCell.swift */,
 				D9C2949524F718DC0086884D /* Assets.xcassets */,
 				D9C2949724F718DC0086884D /* LaunchScreen.storyboard */,
 				D9C2949A24F718DC0086884D /* Info.plist */,
 				D9C2949224F718D50086884D /* the_avalanche.xcdatamodeld */,
+				D9C294B024F8814B0086884D /* GoogleService-Info.plist */,
+				D9CE106224F9E3F500224706 /* SettingsViewController.swift */,
 			);
 			path = "the avalanche";
 			sourceTree = "<group>";
@@ -102,6 +141,17 @@
 			path = "the avalancheTests";
 			sourceTree = "<group>";
 		};
+		E1D51ED750A4947A815CCF2D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CC610283330916190B63E76D /* Pods-the avalanche.debug.xcconfig */,
+				7F5365FE7C237A4E7A5411AB /* Pods-the avalanche.release.xcconfig */,
+				725AD1941A6C4959ABA9686F /* Pods-the avalancheTests.debug.xcconfig */,
+				CFFA1F343BFA04F28FCDEA8E /* Pods-the avalancheTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -109,9 +159,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D9C294A824F718DD0086884D /* Build configuration list for PBXNativeTarget "the avalanche" */;
 			buildPhases = (
+				4E615FAE10AF3781B12BBF45 /* [CP] Check Pods Manifest.lock */,
 				D9C2948224F718D50086884D /* Sources */,
 				D9C2948324F718D50086884D /* Frameworks */,
 				D9C2948424F718D50086884D /* Resources */,
+				9FC8D68D0BAC18B1BE6AEB01 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,6 +178,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D9C294AB24F718DD0086884D /* Build configuration list for PBXNativeTarget "the avalancheTests" */;
 			buildPhases = (
+				1D94834D4837955963542B57 /* [CP] Check Pods Manifest.lock */,
 				D9C2949B24F718DD0086884D /* Sources */,
 				D9C2949C24F718DD0086884D /* Frameworks */,
 				D9C2949D24F718DD0086884D /* Resources */,
@@ -184,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9C2949924F718DC0086884D /* LaunchScreen.storyboard in Resources */,
+				D9C294B124F8814B0086884D /* GoogleService-Info.plist in Resources */,
 				D9C2949624F718DC0086884D /* Assets.xcassets in Resources */,
 				D9C2949124F718D50086884D /* Main.storyboard in Resources */,
 			);
@@ -198,6 +252,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1D94834D4837955963542B57 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-the avalancheTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4E615FAE10AF3781B12BBF45 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-the avalanche-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9FC8D68D0BAC18B1BE6AEB01 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-the avalanche/Pods-the avalanche-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-the avalanche/Pods-the avalanche-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-the avalanche/Pods-the avalanche-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D9C2948224F718D50086884D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -205,8 +323,13 @@
 			files = (
 				D9C2948E24F718D50086884D /* ViewController.swift in Sources */,
 				D9C2949424F718D50086884D /* the_avalanche.xcdatamodeld in Sources */,
+				D9E0795B24F9DF61001C27CB /* LogInViewController.swift in Sources */,
 				D9C2948A24F718D50086884D /* AppDelegate.swift in Sources */,
+				D9E0795D24F9E023001C27CB /* HomeTableViewController.swift in Sources */,
 				D9C2948C24F718D50086884D /* SceneDelegate.swift in Sources */,
+				D9E0795924F984D6001C27CB /* SignUpViewController.swift in Sources */,
+				D9CE106524F9F1AF00224706 /* ActionItemTableViewCell.swift in Sources */,
+				D9CE106324F9E3F500224706 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,6 +487,7 @@
 		};
 		D9C294A924F718DD0086884D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC610283330916190B63E76D /* Pods-the avalanche.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -382,6 +506,7 @@
 		};
 		D9C294AA24F718DD0086884D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F5365FE7C237A4E7A5411AB /* Pods-the avalanche.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -400,6 +525,7 @@
 		};
 		D9C294AC24F718DD0086884D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 725AD1941A6C4959ABA9686F /* Pods-the avalancheTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -422,6 +548,7 @@
 		};
 		D9C294AD24F718DD0086884D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFFA1F343BFA04F28FCDEA8E /* Pods-the avalancheTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
