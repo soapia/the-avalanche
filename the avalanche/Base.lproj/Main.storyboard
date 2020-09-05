@@ -300,7 +300,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MbD-Zk-geg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7188" y="-813"/>
+            <point key="canvasLocation" x="5674" y="-1949"/>
         </scene>
         <!--Action Detail Table View Controller-->
         <scene sceneID="Dtk-Nd-Qcg">
@@ -311,7 +311,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tldrCell" rowHeight="94" id="EDA-lb-wbg" customClass="ActionItemTableViewCell" customModule="the_avalanche" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tldrCell" rowHeight="94" id="EDA-lb-wbg" customClass="TLDRTableViewCell" customModule="the_avalanche" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="94"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EDA-lb-wbg" id="lVs-7C-eh6">
@@ -350,8 +350,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="desc" destination="ect-tI-ELs" id="iAp-k0-YSg"/>
-                                    <outlet property="title" destination="SqR-Dh-8el" id="fX7-SM-Yrd"/>
+                                    <outlet property="desc" destination="ect-tI-ELs" id="2Tc-b3-zid"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="buttonCell" id="nzW-7m-Luh">
@@ -379,7 +378,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="learnCell" rowHeight="94" id="wXt-K1-BdG" customClass="ActionItemTableViewCell" customModule="the_avalanche" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="learnCell" rowHeight="94" id="wXt-K1-BdG" customClass="LearnMoreTableViewCell" customModule="the_avalanche" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="166" width="414" height="94"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wXt-K1-BdG" id="R6m-yQ-aiH">
@@ -418,8 +417,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="desc" destination="tfR-qi-fxO" id="CRz-Rf-uhJ"/>
-                                    <outlet property="title" destination="NQx-Gd-xqV" id="xU6-No-tp3"/>
+                                    <outlet property="desc" destination="tfR-qi-fxO" id="g1D-cr-853"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

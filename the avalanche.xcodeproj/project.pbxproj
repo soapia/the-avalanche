@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8C3E674D12D9B5317CF8E4D3 /* Pods_the_avalancheTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F14F9BFDE9AA66C206951B75 /* Pods_the_avalancheTests.framework */; };
-		913F99B633EF7926D4449C62 /* Pods_the_avalanche.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71801C1837900863784DD13B /* Pods_the_avalanche.framework */; };
+		7029B0080EB8CDC2E0FA6F0C /* Pods_the_avalanche.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B7A482F1B8A6A25DE91E897 /* Pods_the_avalanche.framework */; };
+		9710425DB43118794E1A7ACA /* Pods_the_avalancheTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9F59DA098F2928C2F10E7E1 /* Pods_the_avalancheTests.framework */; };
+		D92CBEDF250444AC00BC541E /* TLDRTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92CBEDE250444AC00BC541E /* TLDRTableViewCell.swift */; };
+		D92CBEE12504458E00BC541E /* LearnMoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92CBEE02504458E00BC541E /* LearnMoreTableViewCell.swift */; };
 		D96F96F624FC316F006F7DDB /* ActionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96F96F524FC316F006F7DDB /* ActionDetailViewController.swift */; };
 		D9C2948A24F718D50086884D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C2948924F718D50086884D /* AppDelegate.swift */; };
 		D9C2948C24F718D50086884D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C2948B24F718D50086884D /* SceneDelegate.swift */; };
@@ -38,10 +40,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1F6051765502287107A9F5D8 /* Pods-the avalancheTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-the avalancheTests.debug.xcconfig"; path = "Target Support Files/Pods-the avalancheTests/Pods-the avalancheTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5EEBF96FE7E448E23729D510 /* Pods-the avalanche.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-the avalanche.debug.xcconfig"; path = "Target Support Files/Pods-the avalanche/Pods-the avalanche.debug.xcconfig"; sourceTree = "<group>"; };
-		71801C1837900863784DD13B /* Pods_the_avalanche.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_the_avalanche.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		858EA4A9B340C5B441B1C305 /* Pods-the avalancheTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-the avalancheTests.release.xcconfig"; path = "Target Support Files/Pods-the avalancheTests/Pods-the avalancheTests.release.xcconfig"; sourceTree = "<group>"; };
+		8B436081D14FDF1E1CFF707C /* Pods-the avalanche.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-the avalanche.debug.xcconfig"; path = "Target Support Files/Pods-the avalanche/Pods-the avalanche.debug.xcconfig"; sourceTree = "<group>"; };
+		8B7A482F1B8A6A25DE91E897 /* Pods_the_avalanche.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_the_avalanche.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F984F8559406A6156AB5A30 /* Pods-the avalancheTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-the avalancheTests.debug.xcconfig"; path = "Target Support Files/Pods-the avalancheTests/Pods-the avalancheTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9BA27738EA4081AADB004CCA /* Pods-the avalanche.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-the avalanche.release.xcconfig"; path = "Target Support Files/Pods-the avalanche/Pods-the avalanche.release.xcconfig"; sourceTree = "<group>"; };
+		B9F59DA098F2928C2F10E7E1 /* Pods_the_avalancheTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_the_avalancheTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D92CBEDE250444AC00BC541E /* TLDRTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLDRTableViewCell.swift; sourceTree = "<group>"; };
+		D92CBEE02504458E00BC541E /* LearnMoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnMoreTableViewCell.swift; sourceTree = "<group>"; };
 		D96F96F524FC316F006F7DDB /* ActionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionDetailViewController.swift; sourceTree = "<group>"; };
 		D9C2948624F718D50086884D /* the avalanche.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "the avalanche.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9C2948924F718D50086884D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,8 +67,7 @@
 		D9E0795A24F9DF61001C27CB /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		D9E0795C24F9E023001C27CB /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		D9F4A30B250438F100E81B9F /* ActionDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionDetailTableViewController.swift; sourceTree = "<group>"; };
-		F14F9BFDE9AA66C206951B75 /* Pods_the_avalancheTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_the_avalancheTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FB2E8EABFD2894EB7266050A /* Pods-the avalanche.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-the avalanche.release.xcconfig"; path = "Target Support Files/Pods-the avalanche/Pods-the avalanche.release.xcconfig"; sourceTree = "<group>"; };
+		F045925B52F5A474A27F4450 /* Pods-the avalancheTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-the avalancheTests.release.xcconfig"; path = "Target Support Files/Pods-the avalancheTests/Pods-the avalancheTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				913F99B633EF7926D4449C62 /* Pods_the_avalanche.framework in Frameworks */,
+				7029B0080EB8CDC2E0FA6F0C /* Pods_the_avalanche.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,18 +83,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C3E674D12D9B5317CF8E4D3 /* Pods_the_avalancheTests.framework in Frameworks */,
+				9710425DB43118794E1A7ACA /* Pods_the_avalancheTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CED2F1C66E2A36BF0EC726C3 /* Frameworks */ = {
+		6F5113A14DA8FA44E75279E4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				71801C1837900863784DD13B /* Pods_the_avalanche.framework */,
-				F14F9BFDE9AA66C206951B75 /* Pods_the_avalancheTests.framework */,
+				8B7A482F1B8A6A25DE91E897 /* Pods_the_avalanche.framework */,
+				B9F59DA098F2928C2F10E7E1 /* Pods_the_avalancheTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -102,7 +106,7 @@
 				D9C294A224F718DD0086884D /* the avalancheTests */,
 				D9C2948724F718D50086884D /* Products */,
 				E1D51ED750A4947A815CCF2D /* Pods */,
-				CED2F1C66E2A36BF0EC726C3 /* Frameworks */,
+				6F5113A14DA8FA44E75279E4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,6 +130,8 @@
 				D9E0795824F984D6001C27CB /* SignUpViewController.swift */,
 				D9E0795A24F9DF61001C27CB /* LogInViewController.swift */,
 				D9C2948F24F718D50086884D /* Main.storyboard */,
+				D92CBEE02504458E00BC541E /* LearnMoreTableViewCell.swift */,
+				D92CBEDE250444AC00BC541E /* TLDRTableViewCell.swift */,
 				D9F4A30B250438F100E81B9F /* ActionDetailTableViewController.swift */,
 				D9CE106424F9F1AF00224706 /* ActionItemTableViewCell.swift */,
 				D9C2949524F718DC0086884D /* Assets.xcassets */,
@@ -150,10 +156,10 @@
 		E1D51ED750A4947A815CCF2D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				5EEBF96FE7E448E23729D510 /* Pods-the avalanche.debug.xcconfig */,
-				FB2E8EABFD2894EB7266050A /* Pods-the avalanche.release.xcconfig */,
-				1F6051765502287107A9F5D8 /* Pods-the avalancheTests.debug.xcconfig */,
-				858EA4A9B340C5B441B1C305 /* Pods-the avalancheTests.release.xcconfig */,
+				8B436081D14FDF1E1CFF707C /* Pods-the avalanche.debug.xcconfig */,
+				9BA27738EA4081AADB004CCA /* Pods-the avalanche.release.xcconfig */,
+				8F984F8559406A6156AB5A30 /* Pods-the avalancheTests.debug.xcconfig */,
+				F045925B52F5A474A27F4450 /* Pods-the avalancheTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -165,11 +171,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D9C294A824F718DD0086884D /* Build configuration list for PBXNativeTarget "the avalanche" */;
 			buildPhases = (
-				2061CFB68EEAD47D4A9D566F /* [CP] Check Pods Manifest.lock */,
+				702902FDCE4DAEBBA4815F97 /* [CP] Check Pods Manifest.lock */,
 				D9C2948224F718D50086884D /* Sources */,
 				D9C2948324F718D50086884D /* Frameworks */,
 				D9C2948424F718D50086884D /* Resources */,
-				D01BAE7E106CC23F32D1CEDF /* [CP] Embed Pods Frameworks */,
+				C6742A57598D29E06AEE14E2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -184,7 +190,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D9C294AB24F718DD0086884D /* Build configuration list for PBXNativeTarget "the avalancheTests" */;
 			buildPhases = (
-				0EBE02E933C730FCB0E4E279 /* [CP] Check Pods Manifest.lock */,
+				56FAA9D63496C633B1E9F56E /* [CP] Check Pods Manifest.lock */,
 				D9C2949B24F718DD0086884D /* Sources */,
 				D9C2949C24F718DD0086884D /* Frameworks */,
 				D9C2949D24F718DD0086884D /* Resources */,
@@ -259,7 +265,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0EBE02E933C730FCB0E4E279 /* [CP] Check Pods Manifest.lock */ = {
+		56FAA9D63496C633B1E9F56E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -281,7 +287,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2061CFB68EEAD47D4A9D566F /* [CP] Check Pods Manifest.lock */ = {
+		702902FDCE4DAEBBA4815F97 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -303,7 +309,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D01BAE7E106CC23F32D1CEDF /* [CP] Embed Pods Frameworks */ = {
+		C6742A57598D29E06AEE14E2 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -334,6 +340,8 @@
 				D96F96F624FC316F006F7DDB /* ActionDetailViewController.swift in Sources */,
 				D9E0795D24F9E023001C27CB /* HomeTableViewController.swift in Sources */,
 				D9C2948C24F718D50086884D /* SceneDelegate.swift in Sources */,
+				D92CBEE12504458E00BC541E /* LearnMoreTableViewCell.swift in Sources */,
+				D92CBEDF250444AC00BC541E /* TLDRTableViewCell.swift in Sources */,
 				D9E0795924F984D6001C27CB /* SignUpViewController.swift in Sources */,
 				D9F4A30C250438F200E81B9F /* ActionDetailTableViewController.swift in Sources */,
 				D9CE106524F9F1AF00224706 /* ActionItemTableViewCell.swift in Sources */,
@@ -495,7 +503,7 @@
 		};
 		D9C294A924F718DD0086884D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5EEBF96FE7E448E23729D510 /* Pods-the avalanche.debug.xcconfig */;
+			baseConfigurationReference = 8B436081D14FDF1E1CFF707C /* Pods-the avalanche.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -514,7 +522,7 @@
 		};
 		D9C294AA24F718DD0086884D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FB2E8EABFD2894EB7266050A /* Pods-the avalanche.release.xcconfig */;
+			baseConfigurationReference = 9BA27738EA4081AADB004CCA /* Pods-the avalanche.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -533,7 +541,7 @@
 		};
 		D9C294AC24F718DD0086884D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1F6051765502287107A9F5D8 /* Pods-the avalancheTests.debug.xcconfig */;
+			baseConfigurationReference = 8F984F8559406A6156AB5A30 /* Pods-the avalancheTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -556,7 +564,7 @@
 		};
 		D9C294AD24F718DD0086884D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 858EA4A9B340C5B441B1C305 /* Pods-the avalancheTests.release.xcconfig */;
+			baseConfigurationReference = F045925B52F5A474A27F4450 /* Pods-the avalancheTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

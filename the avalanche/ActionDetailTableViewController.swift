@@ -7,16 +7,19 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 class ActionDetailTableViewController: UITableViewController {
     
     var receivedData: String = ""
+    var item = [String: String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print(receivedData)
         self.title = "Take Action"
-        
+        addInfo()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -24,6 +27,23 @@ class ActionDetailTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+    func addInfo() {
+            let ref = Database.database().reference().child("actionItems")
+            ref.observeSingleEvent(of: .value) { (snapshot) in
+                for child in snapshot.children.allObjects as! [DataSnapshot] {
+                    var toAdd = child.value as? [String: String] ?? [:]
+                    print(toAdd)
+                    if toAdd["name"] == self.receivedData {
+                        self.item = toAdd
+                    }
+                }
+    //            DispatchQueue.main.async {
+                    self.tableView.reloadData()
+    //            }
+            }
+            refreshControl?.endRefreshing()
+        }
 
     // MARK: - Table view data source
 
@@ -34,50 +54,28 @@ class ActionDetailTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell1 = tableView.dequeueReusableCell(withIdentifier: "tldrCell", for: indexPath) as! TLDRTableViewCell
+        
+        let cell2 = tableView.dequeueReusableCell(withIdentifier: "buttonCell", for: indexPath)
+        
+        let cell3 = tableView.dequeueReusableCell(withIdentifier: "learnCell", for: indexPath) as! LearnMoreTableViewCell
+        
+        if indexPath.row == 0 {
+            cell1.desc.text = item["desc"]
+            return cell1
+        } else if indexPath.row == 2 {
+            cell3.desc.text = item["desc"]
+            return cell3
+        } else {
+            return cell2
+        }
 
         // Configure the cell...
 
-        return cell
+        return UITableViewCell()
     }
     
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
+  /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
