@@ -13,6 +13,7 @@ import FirebaseDatabase
 
 class HomeTableViewController: UITableViewController {
     var items = [[String: String]]()
+    var toSend: String = ""
 //    func handleRefresh(_ refreshControl: UIRefreshControl) {
 //
 //        addToArray()
@@ -136,14 +137,25 @@ class HomeTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
+     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+         
+         // Segue to the second view controller
+        self.toSend = items[indexPath.row]["name"] ?? ""
+        self.performSegue(withIdentifier: "actionDetail", sender: self)
+     }
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        let secondViewController = segue.destination as! ActionDetailTableViewController
+        
+        // set a variable in the second view controller with the data to pass
+        secondViewController.receivedData = self.toSend
     }
-    */
+    
 
 }
