@@ -12,6 +12,7 @@
 		D92CBEDF250444AC00BC541E /* TLDRTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92CBEDE250444AC00BC541E /* TLDRTableViewCell.swift */; };
 		D92CBEE12504458E00BC541E /* LearnMoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92CBEE02504458E00BC541E /* LearnMoreTableViewCell.swift */; };
 		D96F96F624FC316F006F7DDB /* ActionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96F96F524FC316F006F7DDB /* ActionDetailViewController.swift */; };
+		D98A94EF2506AD9A00C99BD7 /* AddNewActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98A94EE2506AD9A00C99BD7 /* AddNewActionViewController.swift */; };
 		D9C2948A24F718D50086884D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C2948924F718D50086884D /* AppDelegate.swift */; };
 		D9C2948C24F718D50086884D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C2948B24F718D50086884D /* SceneDelegate.swift */; };
 		D9C2948E24F718D50086884D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C2948D24F718D50086884D /* ViewController.swift */; };
@@ -48,6 +49,7 @@
 		D92CBEDE250444AC00BC541E /* TLDRTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLDRTableViewCell.swift; sourceTree = "<group>"; };
 		D92CBEE02504458E00BC541E /* LearnMoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnMoreTableViewCell.swift; sourceTree = "<group>"; };
 		D96F96F524FC316F006F7DDB /* ActionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionDetailViewController.swift; sourceTree = "<group>"; };
+		D98A94EE2506AD9A00C99BD7 /* AddNewActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewActionViewController.swift; sourceTree = "<group>"; };
 		D9C2948624F718D50086884D /* the avalanche.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "the avalanche.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9C2948924F718D50086884D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9C2948B24F718D50086884D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				D9E0795824F984D6001C27CB /* SignUpViewController.swift */,
 				D9E0795A24F9DF61001C27CB /* LogInViewController.swift */,
 				D9C2948F24F718D50086884D /* Main.storyboard */,
+				D98A94EE2506AD9A00C99BD7 /* AddNewActionViewController.swift */,
 				D92CBEE02504458E00BC541E /* LearnMoreTableViewCell.swift */,
 				D92CBEDE250444AC00BC541E /* TLDRTableViewCell.swift */,
 				D9F4A30B250438F100E81B9F /* ActionDetailTableViewController.swift */,
@@ -335,6 +338,7 @@
 			files = (
 				D9C2948E24F718D50086884D /* ViewController.swift in Sources */,
 				D9C2949424F718D50086884D /* the_avalanche.xcdatamodeld in Sources */,
+				D98A94EF2506AD9A00C99BD7 /* AddNewActionViewController.swift in Sources */,
 				D9E0795B24F9DF61001C27CB /* LogInViewController.swift in Sources */,
 				D9C2948A24F718D50086884D /* AppDelegate.swift in Sources */,
 				D96F96F624FC316F006F7DDB /* ActionDetailViewController.swift in Sources */,

@@ -151,10 +151,13 @@ class HomeTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-        let secondViewController = segue.destination as! ActionDetailTableViewController
+        if segue.identifier == "actionDetail" {
+            let secondViewController = segue.destination as! ActionDetailTableViewController
+            
+            // set a variable in the second view controller with the data to pass
+            secondViewController.receivedData = self.toSend
+        }
         
-        // set a variable in the second view controller with the data to pass
-        secondViewController.receivedData = self.toSend
     }
     
 
