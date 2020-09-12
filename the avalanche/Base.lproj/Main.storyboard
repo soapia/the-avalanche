@@ -397,7 +397,7 @@
         <!--Contacting Reps-->
         <scene sceneID="Xmc-s3-JV7">
             <objects>
-                <viewController id="jev-l6-IVB" sceneMemberID="viewController">
+                <viewController id="jev-l6-IVB" customClass="AddNewContactRepsViewController" customModule="the_avalanche" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PMV-V5-9n7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -502,7 +502,7 @@
         <!--Petition + Misc-->
         <scene sceneID="lsd-Pa-9A7">
             <objects>
-                <viewController id="JjR-z9-1pI" sceneMemberID="viewController">
+                <viewController id="JjR-z9-1pI" customClass="AddNewPetitionViewController" customModule="the_avalanche" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dxv-h8-QBc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -526,6 +526,9 @@
                                 <rect key="frame" x="175" y="744" width="56" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="SUBMIT"/>
+                                <connections>
+                                    <action selector="submitButton:" destination="JjR-z9-1pI" eventType="touchUpInside" id="CcB-R6-6LH"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Type of Participation:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R8Z-Zb-86K">
                                 <rect key="frame" x="28" y="160" width="163" height="21"/>
@@ -571,6 +574,12 @@
                         <viewLayoutGuide key="safeArea" id="H3f-KZ-7bR"/>
                     </view>
                     <navigationItem key="navigationItem" title="Petition + Misc" id="PA7-ZX-i2B"/>
+                    <connections>
+                        <outlet property="directions" destination="Q4H-w7-wG2" id="KvO-Qv-GDx"/>
+                        <outlet property="links" destination="bOw-qX-USf" id="PNQ-Nn-q7c"/>
+                        <outlet property="mediaLinks" destination="2bP-dd-JYx" id="Xyq-hy-ZFL"/>
+                        <outlet property="participationType" destination="pso-Xk-qyL" id="rFD-Ux-8WM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pfe-aO-TVA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

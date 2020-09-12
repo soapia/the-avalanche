@@ -12,7 +12,7 @@ import FirebaseAuth
 import FirebaseDatabase
 
 class HomeTableViewController: UITableViewController {
-    var items = [[String: String]]()
+    var items = [[String: Any]]()
     var toSend: String = ""
 //    func handleRefresh(_ refreshControl: UIRefreshControl) {
 //
@@ -42,12 +42,12 @@ class HomeTableViewController: UITableViewController {
         let ref = Database.database().reference().child("actionItems")
         ref.observeSingleEvent(of: .value) { (snapshot) in
             for child in snapshot.children.allObjects as! [DataSnapshot] {
-                var toAdd = child.value as? [String: String] ?? [:]
-                if self.items.contains(toAdd) {
-                    print("i'm already here!")
-                } else {
+                var toAdd = child.value as? [String: Any] ?? [:]
+//                if self.items.contains(toAdd) {
+//                    print("i'm already here!")
+//                } else {
                     self.items.append(toAdd)
-                }
+//                }
                 
                 
             }
@@ -70,15 +70,17 @@ class HomeTableViewController: UITableViewController {
         let ref = Database.database().reference().child("actionItems")
         ref.observeSingleEvent(of: .value) { (snapshot) in
             for child in snapshot.children.allObjects as! [DataSnapshot] {
-                var toAdd = child.value as? [String: String] ?? [:]
-                if self.items.contains(toAdd) {
-                    print("i'm already here!")
-                } else {
+                var toAdd = child.value as? [String: Any] ?? [:]
+//                if self.items.contains(toAdd) {
+//                    print("i'm already here!")
+//                } else {
                     self.items.append(toAdd)
-                }
+//                }
+                print(child)
                 
                 
             }
+            print(self.items)
 //            DispatchQueue.main.async {
                 self.tableView.reloadData()
 //            }
@@ -90,8 +92,8 @@ class HomeTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as! ActionItemTableViewCell
         
-        cell.title.text = items[indexPath.row]["name"]
-        cell.desc.text = items[indexPath.row]["desc"]
+        cell.title.text = items[indexPath.row]["name"] as? String
+        cell.desc.text = items[indexPath.row]["desc"] as? String
         // Configure the cell...
 
         return cell
@@ -143,7 +145,7 @@ class HomeTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
          
          // Segue to the second view controller
-        self.toSend = items[indexPath.row]["name"] ?? ""
+        self.toSend = items[indexPath.row]["name"] as? String ?? ""
         self.performSegue(withIdentifier: "actionDetail", sender: self)
      }
 

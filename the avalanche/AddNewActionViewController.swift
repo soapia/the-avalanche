@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 class AddNewActionViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextViewDelegate {
     
@@ -36,11 +38,13 @@ class AddNewActionViewController: UIViewController, UIPickerViewDelegate, UIPick
     
     let thePicker = UIPickerView()
     var myPickerData = ["Contacting Representatives", "Petitions + Misc"]
+    var dataToAppend = [String: Any]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         actionType.inputView = thePicker
         thePicker.delegate = self
-
+        shortDesc.delegate = self
         // Do any additional setup after loading the view.
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
 
@@ -56,19 +60,22 @@ class AddNewActionViewController: UIViewController, UIPickerViewDelegate, UIPick
     }
     
     @IBAction func nextView(_ sender: Any) {
-        allReady()
-        if actionType.text == "Contacting Representatives" {
-            self.performSegue(withIdentifier: "contactReps", sender: self)
-        } else if actionType.text == "Petitions + Misc" {
-            self.performSegue(withIdentifier: "petitions", sender: self)
+        if allReady() {
+            addNewValue()
+            if actionType.text == "Contacting Representatives" {
+                self.performSegue(withIdentifier: "contactReps", sender: self)
+            } else if actionType.text == "Petitions + Misc" {
+                self.performSegue(withIdentifier: "petitions", sender: self)
+            }
+            print(actionType.text)
         }
-        print(actionType.text)
     }
     
     func allReady() -> Bool {
         var ready = false
         if (myTitle.text != "" && desc.text != "" && shortDesc.text != "" && actionType.text != "") {
             ready = true
+            dataToAppend = ["desc": desc.text!, "name": myTitle.text!, "shortDesc": shortDesc.text!, "actionType": actionType.text!, "approved": false]
         } else {
             let alert = UIAlertController(title: "hey!", message: "you must fill in all of the fields before continuing.", preferredStyle: .alert)
 
@@ -78,6 +85,23 @@ class AddNewActionViewController: UIViewController, UIPickerViewDelegate, UIPick
             self.present(alert, animated: true)
         }
         return ready
+    }
+    
+    func addNewValue() {
+        let ref = Database.database().reference().child("actionItems")
+//        ref.observeSingleEvent(of: .value) { (snapshot) in
+//            var newKey = 0
+//            for child in snapshot.children.allObjects as! [DataSnapshot] {
+//                var usedKey = child.key
+//                if Int(usedKey) == newKey {
+//                    newKey += 1
+//                    print("KEY \(usedKey) HAS BEEN USED\nNOW USING \(newKey)")
+//                }
+//            }
+//
+//        }
+        ref.childByAutoId().setValue(dataToAppend)
+        print(ref)
     }
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
@@ -94,18 +118,29 @@ class AddNewActionViewController: UIViewController, UIPickerViewDelegate, UIPick
         return updatedText.count <= 240
     }
     
-//    func textViewDidChange(_ textView: UITextView) {
-//        charCount.text = String(240 - currentText.count)
-//    }
+    func textViewDidChange(_ textView: UITextView) {
+        charCount.text = String(240 - textView.text.count)
+    }
     
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "contactReps" {
+            let secondViewController = segue.destination as! AddNewContactRepsViewController
+            
+            // set a variable in the second view controller with the data to pass
+            secondViewController.receivedData = self.myTitle.text!
+        } else if segue.identifier == "petitions" {
+            let secondViewController = segue.destination as! AddNewPetitionViewController
+            
+            // set a variable in the second view controller with the data to pass
+            secondViewController.receivedData = self.myTitle.text!
+        }
     }
-    */
+    
 
 }
