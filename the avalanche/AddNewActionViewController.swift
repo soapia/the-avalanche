@@ -37,7 +37,7 @@ class AddNewActionViewController: UIViewController, UIPickerViewDelegate, UIPick
     
     
     let thePicker = UIPickerView()
-    var myPickerData = ["Contacting Representatives", "Petitions + Misc"]
+    var myPickerData = ["Contacting Representatives", "Petitions"]
     var dataToAppend = [String: Any]()
     
     override func viewDidLoad() {
@@ -64,7 +64,7 @@ class AddNewActionViewController: UIViewController, UIPickerViewDelegate, UIPick
             addNewValue()
             if actionType.text == "Contacting Representatives" {
                 self.performSegue(withIdentifier: "contactReps", sender: self)
-            } else if actionType.text == "Petitions + Misc" {
+            } else if actionType.text == "Petitions" {
                 self.performSegue(withIdentifier: "petitions", sender: self)
             }
             print(actionType.text)
