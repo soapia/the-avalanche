@@ -13,7 +13,7 @@ import FirebaseDatabase
 class ActionDetailTableViewController: UITableViewController {
     
     var receivedData: String = ""
-    var item = [String: String]()
+    var item = [String: Any]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,9 +32,9 @@ class ActionDetailTableViewController: UITableViewController {
             let ref = Database.database().reference().child("actionItems")
             ref.observeSingleEvent(of: .value) { (snapshot) in
                 for child in snapshot.children.allObjects as! [DataSnapshot] {
-                    var toAdd = child.value as? [String: String] ?? [:]
+                    var toAdd = child.value as? [String: Any] ?? [:]
                     print(toAdd)
-                    if toAdd["name"] == self.receivedData {
+                    if toAdd["name"]! as! String == self.receivedData {
                         self.item = toAdd
                     }
                 }
@@ -61,10 +61,10 @@ class ActionDetailTableViewController: UITableViewController {
         let cell3 = tableView.dequeueReusableCell(withIdentifier: "learnCell", for: indexPath) as! LearnMoreTableViewCell
         
         if indexPath.row == 0 {
-            cell1.desc.text = item["desc"]
+            cell1.desc.text = item["desc"] as? String
             return cell1
         } else if indexPath.row == 2 {
-            cell3.desc.text = item["desc"]
+            cell3.desc.text = item["desc"] as? String
             return cell3
         } else {
             return cell2
