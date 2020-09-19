@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01369FAB7BBF1C3202E813F2 /* Pods_the_avalancheTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B2BDCCEAA6D7F4CE02321D6 /* Pods_the_avalancheTests.framework */; };
-		AC7A2141EE88054CD29F2965 /* Pods_the_avalanche.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F85C695F77FBD4BEF6125459 /* Pods_the_avalanche.framework */; };
+		6BA18F44FF651EDCED22C277 /* Pods_the_avalanche.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A0918F7A0A9FF585AAA8710 /* Pods_the_avalanche.framework */; };
+		B23BB324F5C49F51E74F48C3 /* Pods_the_avalancheTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E12B4118C19919CE6D2D62A7 /* Pods_the_avalancheTests.framework */; };
 		D92CBEDF250444AC00BC541E /* TLDRTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92CBEDE250444AC00BC541E /* TLDRTableViewCell.swift */; };
-		D92CBEE12504458E00BC541E /* LearnMoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92CBEE02504458E00BC541E /* LearnMoreTableViewCell.swift */; };
 		D96F96F624FC316F006F7DDB /* ActionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96F96F524FC316F006F7DDB /* ActionDetailViewController.swift */; };
+		D97907FB2513E8E700E4E4AD /* ActionButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97907FA2513E8E700E4E4AD /* ActionButtonTableViewCell.swift */; };
 		D98A94EF2506AD9A00C99BD7 /* AddNewActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98A94EE2506AD9A00C99BD7 /* AddNewActionViewController.swift */; };
 		D98A94F12508049F00C99BD7 /* AddNewContactRepsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98A94F02508049F00C99BD7 /* AddNewContactRepsViewController.swift */; };
 		D98A94F3250804B200C99BD7 /* AddNewPetitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98A94F2250804B200C99BD7 /* AddNewPetitionViewController.swift */; };
@@ -43,13 +43,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0B2BDCCEAA6D7F4CE02321D6 /* Pods_the_avalancheTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_the_avalancheTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4D4919036E5AA6F2633F3785 /* Pods-the avalancheTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-the avalancheTests.release.xcconfig"; path = "Target Support Files/Pods-the avalancheTests/Pods-the avalancheTests.release.xcconfig"; sourceTree = "<group>"; };
-		C671F2A33D6CF4EBE995F369 /* Pods-the avalanche.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-the avalanche.debug.xcconfig"; path = "Target Support Files/Pods-the avalanche/Pods-the avalanche.debug.xcconfig"; sourceTree = "<group>"; };
-		CB393E208759DE4D70DA462E /* Pods-the avalancheTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-the avalancheTests.debug.xcconfig"; path = "Target Support Files/Pods-the avalancheTests/Pods-the avalancheTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5D3D3D3AB03C75E89D8CA932 /* Pods-the avalancheTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-the avalancheTests.release.xcconfig"; path = "Target Support Files/Pods-the avalancheTests/Pods-the avalancheTests.release.xcconfig"; sourceTree = "<group>"; };
+		6A0918F7A0A9FF585AAA8710 /* Pods_the_avalanche.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_the_avalanche.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A79A9018468F84D165C5F8EF /* Pods-the avalanche.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-the avalanche.debug.xcconfig"; path = "Target Support Files/Pods-the avalanche/Pods-the avalanche.debug.xcconfig"; sourceTree = "<group>"; };
+		B66A32EA916CF1ECB227D7AF /* Pods-the avalancheTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-the avalancheTests.debug.xcconfig"; path = "Target Support Files/Pods-the avalancheTests/Pods-the avalancheTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D92CBEDE250444AC00BC541E /* TLDRTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLDRTableViewCell.swift; sourceTree = "<group>"; };
-		D92CBEE02504458E00BC541E /* LearnMoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnMoreTableViewCell.swift; sourceTree = "<group>"; };
 		D96F96F524FC316F006F7DDB /* ActionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionDetailViewController.swift; sourceTree = "<group>"; };
+		D97907FA2513E8E700E4E4AD /* ActionButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtonTableViewCell.swift; sourceTree = "<group>"; };
 		D98A94EE2506AD9A00C99BD7 /* AddNewActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewActionViewController.swift; sourceTree = "<group>"; };
 		D98A94F02508049F00C99BD7 /* AddNewContactRepsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewContactRepsViewController.swift; sourceTree = "<group>"; };
 		D98A94F2250804B200C99BD7 /* AddNewPetitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPetitionViewController.swift; sourceTree = "<group>"; };
@@ -72,8 +72,8 @@
 		D9E0795A24F9DF61001C27CB /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		D9E0795C24F9E023001C27CB /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		D9F4A30B250438F100E81B9F /* ActionDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionDetailTableViewController.swift; sourceTree = "<group>"; };
-		F5C2A036EF0A153417E65FA5 /* Pods-the avalanche.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-the avalanche.release.xcconfig"; path = "Target Support Files/Pods-the avalanche/Pods-the avalanche.release.xcconfig"; sourceTree = "<group>"; };
-		F85C695F77FBD4BEF6125459 /* Pods_the_avalanche.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_the_avalanche.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E12B4118C19919CE6D2D62A7 /* Pods_the_avalancheTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_the_avalancheTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9C3435F38B6D02DDFF699B5 /* Pods-the avalanche.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-the avalanche.release.xcconfig"; path = "Target Support Files/Pods-the avalanche/Pods-the avalanche.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC7A2141EE88054CD29F2965 /* Pods_the_avalanche.framework in Frameworks */,
+				6BA18F44FF651EDCED22C277 /* Pods_the_avalanche.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,22 +89,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01369FAB7BBF1C3202E813F2 /* Pods_the_avalancheTests.framework in Frameworks */,
+				B23BB324F5C49F51E74F48C3 /* Pods_the_avalancheTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		45A5C81AF0D3E159D603E8D6 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				F85C695F77FBD4BEF6125459 /* Pods_the_avalanche.framework */,
-				0B2BDCCEAA6D7F4CE02321D6 /* Pods_the_avalancheTests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		D9C2947D24F718D50086884D = {
 			isa = PBXGroup;
 			children = (
@@ -112,7 +103,7 @@
 				D9C294A224F718DD0086884D /* the avalancheTests */,
 				D9C2948724F718D50086884D /* Products */,
 				E1D51ED750A4947A815CCF2D /* Pods */,
-				45A5C81AF0D3E159D603E8D6 /* Frameworks */,
+				F9016F85BFF0A605760A5D73 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -136,10 +127,10 @@
 				D9E0795824F984D6001C27CB /* SignUpViewController.swift */,
 				D9E0795A24F9DF61001C27CB /* LogInViewController.swift */,
 				D9C2948F24F718D50086884D /* Main.storyboard */,
+				D97907FA2513E8E700E4E4AD /* ActionButtonTableViewCell.swift */,
 				D98A94EE2506AD9A00C99BD7 /* AddNewActionViewController.swift */,
 				D98A94F02508049F00C99BD7 /* AddNewContactRepsViewController.swift */,
 				D98A94F2250804B200C99BD7 /* AddNewPetitionViewController.swift */,
-				D92CBEE02504458E00BC541E /* LearnMoreTableViewCell.swift */,
 				D92CBEDE250444AC00BC541E /* TLDRTableViewCell.swift */,
 				D9F4A30B250438F100E81B9F /* ActionDetailTableViewController.swift */,
 				D9CE106424F9F1AF00224706 /* ActionItemTableViewCell.swift */,
@@ -165,12 +156,21 @@
 		E1D51ED750A4947A815CCF2D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C671F2A33D6CF4EBE995F369 /* Pods-the avalanche.debug.xcconfig */,
-				F5C2A036EF0A153417E65FA5 /* Pods-the avalanche.release.xcconfig */,
-				CB393E208759DE4D70DA462E /* Pods-the avalancheTests.debug.xcconfig */,
-				4D4919036E5AA6F2633F3785 /* Pods-the avalancheTests.release.xcconfig */,
+				A79A9018468F84D165C5F8EF /* Pods-the avalanche.debug.xcconfig */,
+				E9C3435F38B6D02DDFF699B5 /* Pods-the avalanche.release.xcconfig */,
+				B66A32EA916CF1ECB227D7AF /* Pods-the avalancheTests.debug.xcconfig */,
+				5D3D3D3AB03C75E89D8CA932 /* Pods-the avalancheTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		F9016F85BFF0A605760A5D73 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6A0918F7A0A9FF585AAA8710 /* Pods_the_avalanche.framework */,
+				E12B4118C19919CE6D2D62A7 /* Pods_the_avalancheTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,11 +180,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D9C294A824F718DD0086884D /* Build configuration list for PBXNativeTarget "the avalanche" */;
 			buildPhases = (
-				70AD82E6759EF603637637FA /* [CP] Check Pods Manifest.lock */,
+				279FE94488E0BE5FC88EFDCE /* [CP] Check Pods Manifest.lock */,
 				D9C2948224F718D50086884D /* Sources */,
 				D9C2948324F718D50086884D /* Frameworks */,
 				D9C2948424F718D50086884D /* Resources */,
-				C27D5399289A3809E502E934 /* [CP] Embed Pods Frameworks */,
+				6ACA6B9720DD6A5B49F123C5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -199,7 +199,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D9C294AB24F718DD0086884D /* Build configuration list for PBXNativeTarget "the avalancheTests" */;
 			buildPhases = (
-				411AA2D4210A268164ED8516 /* [CP] Check Pods Manifest.lock */,
+				0AF5F6D501D3C0260141D6D6 /* [CP] Check Pods Manifest.lock */,
 				D9C2949B24F718DD0086884D /* Sources */,
 				D9C2949C24F718DD0086884D /* Frameworks */,
 				D9C2949D24F718DD0086884D /* Resources */,
@@ -274,7 +274,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		411AA2D4210A268164ED8516 /* [CP] Check Pods Manifest.lock */ = {
+		0AF5F6D501D3C0260141D6D6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -296,7 +296,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		70AD82E6759EF603637637FA /* [CP] Check Pods Manifest.lock */ = {
+		279FE94488E0BE5FC88EFDCE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -318,7 +318,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C27D5399289A3809E502E934 /* [CP] Embed Pods Frameworks */ = {
+		6ACA6B9720DD6A5B49F123C5 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -349,10 +349,10 @@
 				D98A94F12508049F00C99BD7 /* AddNewContactRepsViewController.swift in Sources */,
 				D9C2948A24F718D50086884D /* AppDelegate.swift in Sources */,
 				D96F96F624FC316F006F7DDB /* ActionDetailViewController.swift in Sources */,
+				D97907FB2513E8E700E4E4AD /* ActionButtonTableViewCell.swift in Sources */,
 				D98A94F3250804B200C99BD7 /* AddNewPetitionViewController.swift in Sources */,
 				D9E0795D24F9E023001C27CB /* HomeTableViewController.swift in Sources */,
 				D9C2948C24F718D50086884D /* SceneDelegate.swift in Sources */,
-				D92CBEE12504458E00BC541E /* LearnMoreTableViewCell.swift in Sources */,
 				D92CBEDF250444AC00BC541E /* TLDRTableViewCell.swift in Sources */,
 				D9E0795924F984D6001C27CB /* SignUpViewController.swift in Sources */,
 				D9F4A30C250438F200E81B9F /* ActionDetailTableViewController.swift in Sources */,
@@ -515,7 +515,7 @@
 		};
 		D9C294A924F718DD0086884D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C671F2A33D6CF4EBE995F369 /* Pods-the avalanche.debug.xcconfig */;
+			baseConfigurationReference = A79A9018468F84D165C5F8EF /* Pods-the avalanche.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -534,7 +534,7 @@
 		};
 		D9C294AA24F718DD0086884D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F5C2A036EF0A153417E65FA5 /* Pods-the avalanche.release.xcconfig */;
+			baseConfigurationReference = E9C3435F38B6D02DDFF699B5 /* Pods-the avalanche.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -553,7 +553,7 @@
 		};
 		D9C294AC24F718DD0086884D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CB393E208759DE4D70DA462E /* Pods-the avalancheTests.debug.xcconfig */;
+			baseConfigurationReference = B66A32EA916CF1ECB227D7AF /* Pods-the avalancheTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -576,7 +576,7 @@
 		};
 		D9C294AD24F718DD0086884D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4D4919036E5AA6F2633F3785 /* Pods-the avalancheTests.release.xcconfig */;
+			baseConfigurationReference = 5D3D3D3AB03C75E89D8CA932 /* Pods-the avalancheTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

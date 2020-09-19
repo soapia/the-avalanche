@@ -20,11 +20,16 @@ class HomeTableViewController: UITableViewController {
 //
 //        refreshControl.endRefreshing()
 //    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        refreshItems()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 50
-        addToArray()
+        //addToArray()
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action:  #selector(refreshItems), for: .valueChanged)
         self.refreshControl = refreshControl

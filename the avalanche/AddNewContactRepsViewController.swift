@@ -136,6 +136,7 @@ class AddNewContactRepsViewController: UIViewController {
         let emailArray = trimmedList.split{ $0 == "," }.map(String.init)
         for email in emailArray {
             if !email.isValidEmail {
+                print(email)
                 emailAllGood = false
             }
         }
