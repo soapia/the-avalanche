@@ -160,10 +160,10 @@ class ActionDetailTableViewController: UITableViewController {
         
         
         if indexPath.row == 0 {
-            cell1.desc.text = actions["shortDesc"]
+            cell1.desc.text = item["shortDesc"] as? String
             return cell1
         } else if indexPath.row == 1 {
-            cell2.desc.text = actions["desc"]
+            cell2.desc.text = actions["directions"]
             return cell2
         } else if 2...actionNum+2 ~= indexPath.row {
             if emailsIncluded == false {

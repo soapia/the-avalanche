@@ -106,8 +106,10 @@ class AddNewContactRepsViewController: UIViewController {
         let trimmedList = list.trimmingCharacters(in: .whitespacesAndNewlines)
         let linkArray = trimmedList.split{ $0 == "," }.map(String.init)
         for link in linkArray {
-            if verifyUrl(urlString: link) {
+            let cleanLink = link.trimmingCharacters(in: .whitespacesAndNewlines)
+            if !verifyUrl(urlString: cleanLink) {
                 linkAllGood = false
+                print(link)
             }
         }
     }
@@ -125,7 +127,8 @@ class AddNewContactRepsViewController: UIViewController {
         let trimmedList = list.trimmingCharacters(in: .whitespacesAndNewlines)
         let phoneArray = trimmedList.split{ $0 == "," }.map(String.init)
         for phone in phoneArray {
-            if !phone.isValidPhone {
+            let cleanPhone = phone.trimmingCharacters(in: .whitespacesAndNewlines)
+            if !cleanPhone.isValidPhone {
                 phoneAllGood = false
             }
         }
@@ -135,9 +138,12 @@ class AddNewContactRepsViewController: UIViewController {
         let trimmedList = list.trimmingCharacters(in: .whitespacesAndNewlines)
         let emailArray = trimmedList.split{ $0 == "," }.map(String.init)
         for email in emailArray {
-            if !email.isValidEmail {
-                print(email)
+            let cleanEmail = email.trimmingCharacters(in: .whitespacesAndNewlines)
+            if !cleanEmail.isValidEmail {
+                print(cleanEmail + " IS NOT VALID")
                 emailAllGood = false
+            } else {
+                print(cleanEmail + " IS INDEED VALID")
             }
         }
     }
@@ -184,9 +190,11 @@ class AddNewContactRepsViewController: UIViewController {
 
 extension String {
    var isValidEmail: Bool {
-      let regularExpressionForEmail = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-      let testEmail = NSPredicate(format:"SELF MATCHES %@", regularExpressionForEmail)
-      return testEmail.evaluate(with: self)
+      let __firstpart = "[A-Z0-9a-z]([A-Z0-9a-z._%+-]{0,30}[A-Z0-9a-z])?"
+      let __serverpart = "([A-Z0-9a-z]([A-Z0-9a-z-]{0,30}[A-Z0-9a-z])?\\.){1,5}"
+      let __emailRegex = __firstpart + "@" + __serverpart + "[A-Za-z]{2,8}"
+      let __emailPredicate = NSPredicate(format: "SELF MATCHES %@", __emailRegex)
+      return __emailPredicate.evaluate(with: self)
    }
    var isValidPhone: Bool {
       let regularExpressionForPhone = "^\\d{3}-\\d{3}-\\d{4}$"

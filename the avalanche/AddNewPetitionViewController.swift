@@ -76,7 +76,8 @@ class AddNewPetitionViewController: UIViewController {
         let trimmedList = list.trimmingCharacters(in: .whitespacesAndNewlines)
         let linkArray = trimmedList.split{ $0 == "," }.map(String.init)
         for link in linkArray {
-            if verifyUrl(urlString: link) {
+            let cleanLink = link.trimmingCharacters(in: .whitespacesAndNewlines)
+            if !verifyUrl(urlString: cleanLink) {
                 allGood = false
             }
         }

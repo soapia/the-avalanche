@@ -98,7 +98,7 @@ class HomeTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as! ActionItemTableViewCell
         
         cell.title.text = items[indexPath.row]["name"] as? String
-        cell.desc.text = items[indexPath.row]["desc"] as? String
+        cell.desc.text = items[indexPath.row]["shortDesc"] as? String
         // Configure the cell...
 
         return cell
