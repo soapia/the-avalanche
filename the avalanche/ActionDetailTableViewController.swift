@@ -165,7 +165,7 @@ class ActionDetailTableViewController: UITableViewController {
         } else if indexPath.row == 1 {
             cell2.desc.text = actions["directions"]
             return cell2
-        } else if 2...actionNum+2 ~= indexPath.row {
+        } else if 2...actionNum+1 ~= indexPath.row {
             if emailsIncluded == false {
                 cell3.actionTitle.text = "Send an email"
                 emailsIncluded = true
@@ -194,6 +194,19 @@ class ActionDetailTableViewController: UITableViewController {
         // Configure the cell...
 
         return UITableViewCell()
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let cell = tableView.cellForRow(at: indexPath)
+        if (cell?.isKind(of: TLDRTableViewCell.self))! {
+            cell!.selectionStyle = .none
+            print("im info")
+        } else {
+            cell!.selectionStyle = .gray
+            print("imma button")
+        }
+        
     }
     
     
