@@ -744,7 +744,9 @@
                             <outlet property="delegate" destination="h86-yu-SA8" id="Kel-Kq-7K5"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="xcs-aC-CyX"/>
+                    <navigationItem key="navigationItem" id="xcs-aC-CyX">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="checkmark" catalog="system" style="plain" id="NXn-w9-pko"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2qV-FA-Ina" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -874,4 +876,7 @@
             <point key="canvasLocation" x="3847.826086956522" y="-1279.0178571428571"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="checkmark" catalog="system" width="128" height="114"/>
+    </resources>
 </document>

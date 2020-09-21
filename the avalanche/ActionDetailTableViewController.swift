@@ -9,6 +9,9 @@
 import UIKit
 import Firebase
 import FirebaseDatabase
+import SafariServices
+import CoreLocation
+
 
 class ActionDetailTableViewController: UITableViewController {
     
@@ -27,6 +30,7 @@ class ActionDetailTableViewController: UITableViewController {
     var petitionCount = 0
     var actionNum = 0
     var learnCount = -1
+    var tableArray = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -161,31 +165,39 @@ class ActionDetailTableViewController: UITableViewController {
         
         if indexPath.row == 0 {
             cell1.desc.text = item["shortDesc"] as? String
+//            tableArray.append(item["shortDesc"] as! String)
             return cell1
         } else if indexPath.row == 1 {
             cell2.desc.text = actions["directions"]
+//            tableArray.append(actions["directions"]!)
             return cell2
         } else if 2...actionNum+1 ~= indexPath.row {
             if emailsIncluded == false {
-                cell3.actionTitle.text = "Send an email"
+                cell3.actionTitle.text = "Send an Email"
                 emailsIncluded = true
+//                tableArray.append("Send an email")
                 return cell3
             } else if phoneNumbers.count != 0 && phoneCount != phoneNumbers.count {
                 cell3.actionTitle.text = phoneNumbers[phoneCount]
+//                tableArray.append(phoneNumbers[phoneCount])
                 phoneCount += 1
                 return cell3
             } else if actionLinks.count != 0 && petitionCount != actionLinks.count {
                 cell3.actionTitle.text = actionLinks[petitionCount]
+//                tableArray.append(actionLinks[petitionCount])
                 petitionCount += 1
                 return cell3
             }
+//            tableArray.append(cell3.actionTitle.text!)
         } else {
             if learnCount == -1 {
                 learnCount += 1
                 cell4.desc.text = item["desc"] as? String
+//                tableArray.append(item["desc"] as! String)
                 return cell4
             } else if learnLinks.count != 0 && learnCount != learnLinks.count {
                 cell3.actionTitle.text = learnLinks[learnCount]
+//                tableArray.append(learnLinks[learnCount])
                 learnCount += 1
                 return cell3
             }
@@ -203,8 +215,21 @@ class ActionDetailTableViewController: UITableViewController {
             cell!.selectionStyle = .none
             print("im info")
         } else {
+            // TO DO: MAKE BUTTONS PRESSABLE
+            var fixCell = cell as! ActionButtonTableViewCell
             cell!.selectionStyle = .gray
             print("imma button")
+            if fixCell.actionTitle.text! == "Send an Email" {
+                print("let's email")
+            } else if fixCell.actionTitle.text!.isValidPhone {
+                print("let's call")
+            } else {
+                print("let's link")
+                let unwrapAndFlat = fixCell.actionTitle.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+                let url = (URL(string: unwrapAndFlat) ?? URL(string: "https://google.com"))!
+                let svc = SFSafariViewController(url: url)
+                present(svc, animated: true, completion: nil)
+            }
         }
         
     }
