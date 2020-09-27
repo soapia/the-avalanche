@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseDatabase
+import FirebaseAuth
 import SafariServices
 import CoreLocation
 
@@ -23,6 +24,10 @@ class ActionDetailTableViewController: UITableViewController {
     var actionLinks = [String]()
     var learnLinks = [String]()
     
+    var userName = ""
+    var userCity = ""
+    var userState = ""
+    let geocoder = CLGeocoder()
     
     var numberOfRows = 2
     var phoneCount = 0
@@ -45,6 +50,11 @@ class ActionDetailTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    
+    @IBAction func markAsCompleted(_ sender: Any) {
+        
     }
     
     func addInfo() {
@@ -126,7 +136,84 @@ class ActionDetailTableViewController: UITableViewController {
         }
     }
     
+    func prepEmail() {
+        if let emailText = actions["promptText"] {
+            let userID = Auth.auth().currentUser?.uid
+            var ref : DatabaseReference!
+            ref = Database.database().reference().child("users").child(userID!).child("info")
+            ref.observeSingleEvent(of: .value) { (snapshot) in
+                let value = snapshot.value as? NSDictionary
+                self.userName = value?["name"] as? String ?? ""
+                let zip = value?["zipCode"] as? String ?? ""
+                self.geocoder.geocodeAddressString(zip) {
+                    (placemarks, error) -> Void in
+                    // Placemarks is an optional array of CLPlacemarks, first item in array is best guess of Address
+                    print(placemarks)
+                    if let placemark = placemarks?[0] {
+
+                        self.userCity = placemark.locality ?? ""
+                        print(self.userCity)
+                        self.userState = placemark.administrativeArea ?? ""
+                        print(self.userState)
+                        var place = "\(self.userCity), \(self.userState)"
+                        var promptText = emailText.replacingOccurrences(of: "NAME", with: self.userName).replacingOccurrences(of: "CITY", with: "\(place)")
+                        print(promptText)
+                        // var myCharset = CharacterSet("#%&")
+                        let urlPrompt = promptText.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+                        // let prompt = urlPrompt?.url
+                            //
+                        
+                        let toWho = self.getEmailList()
+                        let link = "mailto:\(toWho)?subject=EDIT%20ME&body=\(urlPrompt!)"
+                        let unwrap = URLComponents(string: link)
+                        let prompt = unwrap?.url
+                        print(link)
+                        if let url = prompt {
+                          if #available(iOS 10.0, *) {
+                            UIApplication.shared.open(url)
+                          } else {
+                            UIApplication.shared.openURL(url)
+                          }
+                        }
+                    }
+                }
+            }
+        }
+    }
     
+    func zipToCity(zipCode: String) -> String {
+        // var toReturn = ""
+        geocoder.geocodeAddressString(zipCode) {
+            (placemarks, error) -> Void in
+            // Placemarks is an optional array of CLPlacemarks, first item in array is best guess of Address
+            print(placemarks)
+            if let placemark = placemarks?[0] {
+
+                self.userCity = placemark.locality ?? ""
+                print(self.userCity)
+                self.userState = placemark.administrativeArea ?? ""
+                print(self.userState)
+            }
+
+        }
+        return "\(self.userCity), \(self.userState)"
+    }
+    
+//    func linkReplace(link: String) -> String {
+//        var newLink = URLComponents()
+//    }
+    
+    func getEmailList() -> String {
+        var emailString = ""
+        for email in self.emails {
+            emailString += email
+            if email != emails.last {
+               emailString += ","
+            }
+        }
+        let toReturn = emailString.replacingOccurrences(of: " ", with: "")
+        return toReturn
+    }
     
 
 
@@ -221,8 +308,14 @@ class ActionDetailTableViewController: UITableViewController {
             print("imma button")
             if fixCell.actionTitle.text! == "Send an Email" {
                 print("let's email")
+                prepEmail()
             } else if fixCell.actionTitle.text!.isValidPhone {
                 print("let's call")
+                let unwrapAndFlat = fixCell.actionTitle.text!.trimmingCharacters(in: .whitespacesAndNewlines).replacingOccurrences(of: "-", with: "")
+                if let url = URL(string: "tel://1\(unwrapAndFlat)"),
+                UIApplication.shared.canOpenURL(url) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                }
             } else {
                 print("let's link")
                 let unwrapAndFlat = fixCell.actionTitle.text!.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -231,7 +324,6 @@ class ActionDetailTableViewController: UITableViewController {
                 present(svc, animated: true, completion: nil)
             }
         }
-        
     }
     
     

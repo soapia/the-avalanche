@@ -745,7 +745,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="xcs-aC-CyX">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="checkmark" catalog="system" style="plain" id="NXn-w9-pko"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="checkmark" catalog="system" style="plain" id="NXn-w9-pko">
+                            <connections>
+                                <action selector="markAsCompleted:" destination="h86-yu-SA8" id="ao0-l0-bum"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2qV-FA-Ina" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
